@@ -1,0 +1,23 @@
+{
+  "name": "project-sfcc-playwright",
+  "version": "1.0.0",
+  "description": "Project with QA Automation in Salesforce Commerce",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AldreaMOR/project-sfcc-playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AldreaMOR/project-sfcc-playwright/issues"
+  },
+  "homepage": "https://github.com/AldreaMOR/project-sfcc-playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.1",
+    "@types/node": "^25.2.0"
+  }
+}
