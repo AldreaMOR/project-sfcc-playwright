@@ -62,8 +62,3 @@ test('Access cart with products', async ({ page }) => {
     await expect(page).toHaveURL(/cart/)
     await page.getByText('Your Cart')
 })
-
-
-/*test('Sem estoque ', async ({ page }) => { //TODO
-
-}*/

@@ -1,0 +1,227 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link "Skip to main content" [ref=e4] [cursor=pointer]:
+      - /url: "#maincontent"
+    - link "Skip to footer content" [ref=e5] [cursor=pointer]:
+      - /url: "#footercontent"
+    - generic [ref=e8]:
+      - generic [ref=e11]:
+        - strong [ref=e12]: FREE 2-Day SHIPPING
+        - text: FOR ORDERS OVER $300
+      - button "Close" [ref=e14] [cursor=pointer]: ×
+    - navigation [ref=e15]:
+      - generic [ref=e18]:
+        - link "Commerce Cloud Storefront Reference Architecture" [ref=e20] [cursor=pointer]:
+          - /url: /s/RefArch/home?lang=en_US
+          - img "Commerce Cloud Storefront Reference Architecture" [ref=e21]
+        - generic [ref=e22]:
+          - button "Login to your account" [ref=e26] [cursor=pointer]:
+            - generic [ref=e27]: 
+            - text: Login
+          - generic [ref=e28]:
+            - search [ref=e31]:
+              - combobox "Enter Keyword or Item No." [ref=e32]
+              - text: 
+              - button "Submit search keywords" [ref=e33] [cursor=pointer]: 
+            - generic [ref=e34]:
+              - link "Cart 0 Items" [ref=e36] [cursor=pointer]:
+                - /url: https://production.sitegenesis.dw.demandware.net/s/RefArch/cart?lang=en_US
+                - generic [ref=e37]: 
+                - generic [ref=e38]: "0"
+              - text: 
+      - navigation [ref=e42]:
+        - navigation [ref=e43]:
+          - menu [ref=e44]:
+            - button "New Arrivals" [ref=e45] [cursor=pointer]
+            - button "Womens" [ref=e46] [cursor=pointer]
+            - button "Mens" [ref=e47] [cursor=pointer]
+            - button "Electronics" [ref=e48] [cursor=pointer]
+            - link "Top Sellers" [ref=e49] [cursor=pointer]:
+              - /url: https://production.sitegenesis.dw.demandware.net/s/RefArch/search?lang=en_US&amp;cgid=root&amp;srule=top-sellers
+            - text: 
+      - text:  
+  - main [ref=e50]:
+    - generic [ref=e51]:
+      - generic:
+        - generic: / /
+      - generic [ref=e52]:
+        - generic [ref=e54]:
+          - list [ref=e55]:
+            - listitem [ref=e56] [cursor=pointer]
+            - listitem [ref=e57] [cursor=pointer]
+          - listbox [ref=e58]:
+            - img "Cowl Drape Sarong Dress, Pool, large image number 0" [ref=e60]
+          - button "Previous" [ref=e61] [cursor=pointer]:
+            - generic [ref=e62]: 
+            - generic [ref=e63]: Previous
+          - button "Next" [ref=e64] [cursor=pointer]:
+            - generic [ref=e65]: 
+            - generic [ref=e66]: Next
+        - generic [ref=e67]:
+          - navigation "Breadcrumb" [ref=e71]:
+            - list [ref=e72]:
+              - listitem [ref=e73]:
+                - link "Womens" [ref=e74] [cursor=pointer]:
+                  - /url: /s/RefArch/womens/?lang=en_US
+              - listitem [ref=e75]:
+                - text: /
+                - link "Clothing" [ref=e76] [cursor=pointer]:
+                  - /url: /s/RefArch/womens/clothing/?lang=en_US
+              - listitem [ref=e77]:
+                - text: /
+                - link "Dresses" [ref=e78] [cursor=pointer]:
+                  - /url: /s/RefArch/womens/clothing/dresses/?lang=en_US
+          - heading "Cowl Drape Sarong Dress" [level=1] [ref=e81]
+          - generic [ref=e84]:
+            - generic [ref=e85]: Item No. 25503585M
+            - generic [ref=e86]:
+              - generic [ref=e87]: 5 out of 5 Customer Rating
+              - generic [ref=e88]: 
+              - generic [ref=e89]: 
+              - generic [ref=e90]: 
+              - generic [ref=e91]: 
+              - generic [ref=e92]: 
+          - generic [ref=e93]:
+            - generic [ref=e96]:
+              - generic [ref=e97]: Select Color
+              - button "Select Color Black" [ref=e98] [cursor=pointer]
+              - button "Select Color Pool" [active] [ref=e101] [cursor=pointer]:
+                - generic [ref=e102]: 
+                - generic [ref=e103]: selected
+            - generic [ref=e104]:
+              - generic [ref=e106]:
+                - generic [ref=e107]: Select Size
+                - combobox "Select Size" [ref=e108]:
+                  - option "Select Size"
+                  - option "4" [selected]
+                  - option "6"
+                  - option "8"
+                  - option "10"
+                  - option "12"
+                  - option "14" [disabled]
+                  - option "16" [disabled]
+              - generic [ref=e109]:
+                - generic [ref=e110]: Quantity
+                - combobox "Quantity" [ref=e111]:
+                  - option "1" [selected]
+                  - option "2"
+                  - option "3"
+                  - option "4"
+                  - option "5"
+                  - option "6"
+                  - option "7"
+                  - option "8"
+                  - option "9"
+                  - option "10"
+            - generic [ref=e112]:
+              - generic [ref=e114]: "Availability:"
+              - list [ref=e116]:
+                - listitem [ref=e117]:
+                  - generic [ref=e118]: Select Styles for Availability
+            - separator [ref=e119]
+            - generic [ref=e120]:
+              - generic [ref=e126]: $118.00
+              - button " Add to Cart" [disabled] [ref=e129]:
+                - generic [ref=e130]: 
+                - text: Add to Cart
+            - list [ref=e133]:
+              - listitem [ref=e134]:
+                - link "Create a Pinterest Pin for Cowl Drape Sarong Dress" [ref=e135] [cursor=pointer]:
+                  - /url: https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fproduction.sitegenesis.dw.demandware.net%2Fs%2FRefArch%2Fcowl-drape-sarong-dress%2F25503585M.html%3Flang%3Den_US&description=Cowl%20Drape%20Sarong%20Dress&media=https%3A%2F%2Fproduction.sitegenesis.dw.demandware.net%2Fon%2Fdemandware.static%2F-%2FSites-apparel-m-catalog%2Fdefault%2Fdwbc5d98a8%2Fimages%2Flarge%2FPG.10208459.JJ169XX.PZ.jpg
+                  - generic [ref=e136]: 
+              - listitem [ref=e137]:
+                - link "Share Cowl Drape Sarong Dress on Facebook" [ref=e138] [cursor=pointer]:
+                  - /url: https://www.facebook.com/share.php?u=https%3A%2F%2Fproduction.sitegenesis.dw.demandware.net%2Fs%2FRefArch%2Fcowl-drape-sarong-dress%2F25503585M.html%3Flang%3Den_US
+                  - generic [ref=e139]: 
+              - listitem [ref=e140]:
+                - link "Share a link to Cowl Drape Sarong Dress on Twitter" [ref=e141] [cursor=pointer]:
+                  - /url: https://twitter.com/share?url=https%3A%2F%2Fproduction.sitegenesis.dw.demandware.net%2Fs%2FRefArch%2Fcowl-drape-sarong-dress%2F25503585M.html%3Flang%3Den_US&text=Cowl Drape Sarong Dress
+                  - generic [ref=e142]: 
+              - listitem [ref=e143]:
+                - button "Copy a link to Cowl Drape Sarong Dress" [ref=e144] [cursor=pointer]:
+                  - generic [ref=e145]: 
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - heading "Description" [level=2] [ref=e149]
+          - generic [ref=e150]: Look polished in this terrific tonal dress. It is perfect for desk to dinner!
+        - generic [ref=e151]:
+          - heading "Details" [level=2] [ref=e153]
+          - generic [ref=e154]: Look polished in this terrific tonal dress. It is perfect for desk to dinner!
+  - contentinfo [ref=e155]:
+    - generic [ref=e156]:
+      - generic [ref=e157]:
+        - generic [ref=e159]:
+          - link "Locate Store" [ref=e160] [cursor=pointer]:
+            - /url: https://production.sitegenesis.dw.demandware.net/s/RefArch/stores?lang=en_US&showMap=true&horizontalView=true&isForm=true
+            - heading "Locate Store" [level=2] [ref=e161]
+          - text: The Store Locator is designed to help you find the closest store near you.
+        - generic [ref=e163]:
+          - heading "Account" [level=2] [ref=e165]
+          - list [ref=e166]:
+            - listitem [ref=e167]:
+              - link "My Account" [ref=e168] [cursor=pointer]:
+                - /url: https://production.sitegenesis.dw.demandware.net/s/RefArch/account?lang=en_US
+            - listitem [ref=e169]:
+              - link "Check Order" [ref=e170] [cursor=pointer]:
+                - /url: https://production.sitegenesis.dw.demandware.net/s/RefArch/orders?lang=en_US
+        - generic [ref=e172]:
+          - heading "Customer Service" [level=2] [ref=e174]
+          - list [ref=e175]:
+            - listitem [ref=e176]:
+              - link "Contact Us" [ref=e177] [cursor=pointer]:
+                - /url: https://production.sitegenesis.dw.demandware.net/on/demandware.store/Sites-RefArch-Site/en_US/ContactUs-Landing
+            - listitem [ref=e178]:
+              - link "Gift Certificates" [ref=e179] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e180]:
+              - link "Help" [ref=e181] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e182]:
+              - link "Site Map" [ref=e183] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e185]:
+          - heading "About" [level=2] [ref=e187]
+          - list [ref=e188]:
+            - listitem [ref=e189]:
+              - link "About Us" [ref=e190] [cursor=pointer]:
+                - /url: https://production.sitegenesis.dw.demandware.net/s/RefArch/about%20salesforce/about-us.html?lang=en_US
+            - listitem [ref=e191]:
+              - link "Privacy" [ref=e192] [cursor=pointer]:
+                - /url: https://production.sitegenesis.dw.demandware.net/s/RefArch/customer%20service/privacy%20%26%20security/privacy-policy.html?lang=en_US
+            - listitem [ref=e193]:
+              - link "Terms" [ref=e194] [cursor=pointer]:
+                - /url: https://production.sitegenesis.dw.demandware.net/s/RefArch/customer%20service/terms%20%26%20conditions/terms.html?lang=en_US
+            - listitem [ref=e195]:
+              - link "Jobs" [ref=e196] [cursor=pointer]:
+                - /url: https://production.sitegenesis.dw.demandware.net/s/RefArch/about%20salesforce/join%20us/jobs-landing.html?lang=en_US
+      - separator [ref=e197]
+      - generic [ref=e198]:
+        - generic [ref=e199]:
+          - list [ref=e200]:
+            - listitem [ref=e201]:
+              - link "LinkedIn" [ref=e202] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/demandware
+                - text: 
+            - listitem [ref=e203]:
+              - link "Facebook" [ref=e204] [cursor=pointer]:
+                - /url: https://www.facebook.com/demandware
+                - text: 
+            - listitem [ref=e205]:
+              - link "Twitter" [ref=e206] [cursor=pointer]:
+                - /url: https://twitter.com/demandware
+                - text: 
+            - listitem [ref=e207]:
+              - link "YouTube" [ref=e208] [cursor=pointer]:
+                - /url: https://www.youtube.com/user/demandware
+                - text: 
+          - button "Back to top" [ref=e209] [cursor=pointer]:
+            - generic [ref=e210]:
+              - generic [ref=e211]: 
+              - generic [ref=e212]: 
+        - generic [ref=e214]:
+          - generic [ref=e215]: © 2004-2019 Salesforce. All Rights Reserved.
+          - generic [ref=e216]: This is a demo store only. Orders made will NOT be processed.
+```
