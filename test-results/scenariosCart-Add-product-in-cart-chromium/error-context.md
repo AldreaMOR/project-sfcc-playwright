@@ -106,8 +106,8 @@
               - generic [ref=e109]:
                 - generic [ref=e110]: Quantity
                 - combobox "Quantity" [ref=e111]:
-                  - option "1"
-                  - option "2" [selected]
+                  - option "1" [selected]
+                  - option "2"
                   - option "3"
                   - option "4"
                   - option "5"

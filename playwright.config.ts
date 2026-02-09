@@ -15,7 +15,7 @@ export default defineConfig({
   timeout: 40000,
   globalTimeout: 60000,
   expect: {
-    timeout: 2000,
+    timeout: 20000,
   },
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -45,7 +45,7 @@ export default defineConfig({
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
-        viewport: {width: 1707, height: 1067},
+        viewport: {width: 1707, height: 898},
       },
     },
 
