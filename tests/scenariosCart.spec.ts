@@ -9,7 +9,7 @@ test.beforeEach(async ({page}) => {
     await page.locator('.modal-content').getByRole('button', {name: 'Yes' }).click()
 })
 
-test('Add product in cart', async ({ page }) => {
+test('Add product in cart using while', async ({ page }) => {
 
     await expect(page.locator('.minicart-quantity').getByText('0').first()).toBeVisible()
 
@@ -18,15 +18,80 @@ test('Add product in cart', async ({ page }) => {
     //await page.getByLabel('Quantity').selectOption('2') /** Error in OOTB SFCC because of pointing components manually it is failing too */
     
     await page.getByRole('button', { name: 'Select Color Pool' }).click({timeout: 15000})
-    //to fix
-    //await expect(page.locator('.list-unstyled availability-msg')).toHaveText('Availability: In Stock') //Adicionar um for para tentar novamente ao mudar de opção e voltar ao anterior e tentar novamente.
-await expect(
-  page.locator('li:has-text("Availability: In Stock")')
-).toBeVisible();
+    
+    // Get initial stock status
+    let stockText = (await page.locator('.availability-msg').innerText()).trim()
+    console.log('Initial stock:', stockText)
 
-    await page.getByRole('button', { name: 'Add to Cart' }).click({timeout: 20000})
+    // Max attempts to avoid infinite loops
+    const MAX_ATTEMPTS = 10
+    let attempts = 0
 
+    while (stockText !== 'Availability: In Stock' && attempts < MAX_ATTEMPTS) {
+        attempts++
+        console.log(`Attempt ${attempts} - Product still not in stock`)
+
+        await page.getByLabel('Size').selectOption('4')
+        await page.getByLabel('Size').selectOption('6')
+        await page.getByRole('button', { name: 'Select Color Pool' }).click()
+
+        // Update existing variable, DO NOT redeclare
+        stockText = (await page.locator('.availability-msg').innerText()).trim()
+        console.log('Updated stock:', stockText)
+    }
+
+    // If stock never became available
+    /*if (stockText !== 'Availability: In Stock') {
+        throw new Error(`Product did not become available after ${MAX_ATTEMPTS} attempts`)
+    }*/
+
+    // Success – add to cart
+    await page.getByRole('button', { name: 'Add to Cart' }).click({ timeout: 20000 })
     await expect(page.locator('.minicart-quantity').getByText('1').first()).toBeVisible()
+
+})
+
+test('Add product in cart', async ({ page }) => {
+
+    await expect(page.locator('.minicart-quantity').getByText('0').first()).toBeVisible()
+
+    await page.getByLabel('Size').selectOption('6')
+
+    await expect.poll(async () => {
+        return await page
+        .getByLabel('Size')
+        .locator('option:checked')
+        .getAttribute('data-attr-value')
+    }, { timeout: 30000}).toBe('006')
+
+    await page.getByLabel('Quantity').selectOption('2') /** Error in OOTB SFCC because of pointing components manually it is failing too */
+    
+    await expect.poll(async () => {
+        return await page
+        .getByLabel('Quantity')
+        .locator('option:checked')
+        .getAttribute('value')
+    }, { timeout: 30000}).toBe('2')
+
+    await page.getByRole('button', { name: 'Select Color Pool' }).click({timeout: 30000})
+    
+    // Aguarda que o texto da <li> dentro de .availability-msg mude para "In Stock"
+    /*await expect.poll(async () => {
+        const txt = await page.locator('.availability-msg').innerText()
+        return txt.trim()
+    }, { timeout: 20000}).toBe('In Stock')*/
+    
+    //to fix
+    await expect.poll(async () => {
+        return await page
+        .locator('.availability-msg')
+        .innerText()
+    }, { timeout: 20000}).toBe('In Stock')
+
+    // Success – add to cart
+    await page.getByRole('button', { name: 'Add to Cart' }).click({ timeout: 20000 })
+    await expect(page.locator('.minicart-quantity').getByText('1').first()).toBeVisible()
+
 })
 
 test('Adding product out of stock and button not enabled', async ({ page }) => {
